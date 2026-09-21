@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #050505;
+  color: white;
+}
+
+header {
+  padding: 22px 20px;
+  text-align: center;
+  border-bottom: 1px solid #006eff;
+  background: #030303;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+header p {
+  color: #006eff;
+  font-size: 11px;
+  letter-spacing: 3px;
+  margin-top: 7px;
+}
+
+main {
+  max-width: 650px;
+  margin: auto;
+}
+
+.intro {
+  text-align: center;
+  padding: 65px 20px 45px;
+}
+
+.intro span {
+  color: #006eff;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.intro h1 {
+  font-size: 48px;
+  line-height: 0.95;
+  margin: 20px 0;
+}
+
+.intro h1 strong {
+  color: #006eff;
+}
+
+.intro p {
+  color: #aaa;
+}
+
+.services {
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
+.selection-info {
+  text-align: center;
+  color: #777;
+  font-size: 13px;
+  margin-top: -15px;
+  margin-bottom: 15px;
+}
+
+.selected-count {
+  text-align: center;
+  color: #006eff;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.service {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px;
+  margin-bottom: 12px;
+  background: #0d0d0d;
+  border: 1px solid #222;
+  border-radius: 8px;
+  color: white;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.service:hover,
+.service.selected {
+  border-color: #006eff;
+  box-shadow: 0 0 18px rgba(0, 110, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.service > span {
+  font-size: 27px;
+}
+
+.service strong {
+  display: block;
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+
+.service small {
+  color: #888;
+}
+
+.booking {
+  margin: 35px 20px 70px;
+  padding: 30px 20px;
+  background: #0b0b0b;
+  border: 1px solid #222;
+  border-radius: 10px;
+}
+
+.selected {
+  padding: 16px;
+  margin-bottom: 25px;
+  background: #050505;
+  border: 1px solid #006eff;
+  border-radius: 6px;
+}
+
+.selected span {
+  display: block;
+  color: #777;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.selected strong {
+  color: #006eff;
+  line-height: 1.6;
+}
+
+label {
+  display: block;
+  margin: 18px 0 7px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 15px;
+  background: #050505;
+  color: white;
+  border: 1px solid #292929;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #006eff;
+}
+
+select:disabled {
+  color: #666;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+#bookButton {
+  width: 100%;
+  margin-top: 25px;
+  padding: 17px;
+  background: #006eff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(0, 110, 255, 0.3);
+  transition: 0.25s;
+}
+
+#bookButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(0, 110, 255, 0.5);
+}
+
+.distance {
+  text-align: center;
+  color: #777;
+  font-size: 12px;
+  margin-top: 18px;
+}
+
+footer {
+  padding: 45px 20px;
+  text-align: center;
+  border-top: 1px solid #006eff;
+  background: #030303;
+}
+
+footer div {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+footer p {
+  color: #777;
+  margin-top: 9px;
+  font-size: 13px;
+}
+
+@media (max-width: 500px) {
+
+  .intro h1 {
+    font-size: 42px;
+  }
+
+  .booking {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .services {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

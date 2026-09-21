@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bruni Detail - Prenotazioni</title>
+  <link rel="stylesheet" href="style.css">
+
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+</head>
+
+<body>
+
+<header>
+  <div class="logo">BRUNI DETAIL</div>
+  <p>PRENOTAZIONI</p>
+</header>
+
+<main>
+
+  <section class="intro">
+    <span>DETAILING AUTO MOBILE</span>
+
+    <h1>
+      PRENOTA IL TUO<br>
+      <strong>DETAILING</strong>
+    </h1>
+
+    <p>Volvera, Torino e dintorni</p>
+  </section>
+
+  <section class="services">
+
+    <h2>SCEGLI I SERVIZI</h2>
+
+    <p class="selection-info">
+      Puoi selezionare uno o più servizi
+    </p>
+
+    <div class="selected-count">
+      <span id="serviceCount">0</span>
+      servizi selezionati
+    </div>
+
+    <button class="service" data-service="Pulizia interna">
+      <span>🧽</span>
+
+      <div>
+        <strong>Pulizia interna</strong>
+        <small>Pulizia completa degli interni</small>
+      </div>
+    </button>
+
+    <button class="service" data-service="Pulizia esterna">
+      <span>🚿</span>
+
+      <div>
+        <strong>Pulizia esterna</strong>
+        <small>Lavaggio e cura della carrozzeria</small>
+      </div>
+    </button>
+
+    <button class="service" data-service="Interno + esterno">
+      <span>✨</span>
+
+      <div>
+        <strong>Interno + esterno</strong>
+        <small>Servizio completo</small>
+      </div>
+    </button>
+
+    <button class="service" data-service="Sedili in tessuto">
+      <span>🪑</span>
+
+      <div>
+        <strong>Sedili in tessuto</strong>
+        <small>Pulizia profonda dei sedili</small>
+      </div>
+    </button>
+
+    <button class="service" data-service="Trattamento pelle">
+      <span>🧴</span>
+
+      <div>
+        <strong>Trattamento pelle</strong>
+        <small>Pulizia e trattamento della pelle</small>
+      </div>
+    </button>
+
+    <button class="service" data-service="Pulizia vetri">
+      <span>🪟</span>
+
+      <div>
+        <strong>Pulizia vetri</strong>
+        <small>Pulizia accurata dei vetri</small>
+      </div>
+    </button>
+
+  </section>
+
+  <section class="booking">
+
+    <h2>PRENOTAZIONE</h2>
+
+    <div class="selected">
+      <span>Servizi scelti</span>
+
+      <strong id="selectedServices">
+        Nessun servizio selezionato
+      </strong>
+    </div>
+
+    <label for="name">
+      Nome e cognome
+    </label>
+
+    <input
+      type="text"
+      id="name"
+      placeholder="Il tuo nome e cognome"
+    >
+
+    <label for="brand">
+      Marca auto
+    </label>
+
+    <select id="brand">
+      <option value="">
+        Seleziona marca
+      </option>
+    </select>
+
+    <label for="model">
+      Modello auto
+    </label>
+
+    <select id="model" disabled>
+      <option value="">
+        Prima seleziona la marca
+      </option>
+    </select>
+
+    <label for="phone">
+      Numero di telefono
+    </label>
+
+    <input
+      type="tel"
+      id="phone"
+      placeholder="Il tuo numero"
+    >
+
+    <label for="date">
+      Data
+    </label>
+
+    <input
+      type="date"
+      id="date"
+    >
+
+    <label for="time">
+      Orario preferito
+    </label>
+
+    <input
+      type="time"
+      id="time"
+    >
+
+    <label for="address">
+      Indirizzo
+    </label>
+
+    <input
+      type="text"
+      id="address"
+      placeholder="Dove dobbiamo venire?"
+    >
+
+    <label for="notes">
+      Note
+    </label>
+
+    <textarea
+      id="notes"
+      placeholder="Eventuali informazioni aggiuntive"
+    ></textarea>
+
+    <button id="bookButton">
+      💬 PRENOTA SU WHATSAPP
+    </button>
+
+    <p class="distance">
+      Trasferta inclusa entro 20 km
+    </p>
+
+  </section>
+
+</main>
+
+<footer>
+
+  <div>BRUNI DETAIL</div>
+
+  <p>Detailing Auto Mobile</p>
+
+  <p>Volvera, Torino e dintorni</p>
+
+  <p>📞 366 477 6201</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js').catch(() => {});
+  });
+}
+</script>
+
+</body>
+</html>
